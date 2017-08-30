@@ -19,5 +19,7 @@ namespace Eventos.IO.Domain.Interfaces
         void Remove(Guid id);
 
         IEnumerable<TEntity> Find(Expression<Func<TEntity, bool>> predicate);
+
+        int SaveChanges();
     }
 }

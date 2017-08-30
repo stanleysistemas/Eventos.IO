@@ -6,17 +6,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Eventos.IO.Domain.Organizadores
+namespace Eventos.IO.Domain.Eventos
 {
     public class Evento : Entity<Evento>
     {
-        public Evento(string nome, 
-                      DateTime dataInicio,
-                      DateTime datafim, 
-                      bool gratuito,
-                      decimal valor ,
-                      bool online, 
-                      string nomeEmpresa)
+        public Evento(
+                 string nome, 
+                 DateTime dataInicio,
+                 DateTime datafim, 
+                 bool gratuito,
+                 decimal valor ,
+                 bool online, 
+                 string nomeEmpresa)
        
         {
             Id = Guid.NewGuid();
