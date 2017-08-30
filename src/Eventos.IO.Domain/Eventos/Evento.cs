@@ -1,11 +1,12 @@
 ﻿using Eventos.IO.Domain.Core.Models;
+using Eventos.IO.Domain.Organizadores;
 using FluentValidation;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Eventos.IO.Domain.Models
+namespace Eventos.IO.Domain.Organizadores
 {
     public class Evento : Entity<Evento>
     {
@@ -26,19 +27,6 @@ namespace Eventos.IO.Domain.Models
             Valor = valor;
             OnLine = online;
             NomeEmpresa = nomeEmpresa;
-
-
-            //ErrosValidacao = new Dictionary<string, string>();
-
-            //if (nome.Length < 3)
-            //    ErrosValidacao.Add("Nome","O nome do evento deve ter mais de 3 caracteres");
-
-            //if (gratuito && valor != 0)
-            //    ErrosValidacao.Add("Valor", "Não pode ter valor se gratuito");
-
-            //if (ErrosValidacao.Any())
-            //    throw new Exception("A Entidade possui " + ErrosValidacao.Count() + " Erros");
-
         }
 
 
@@ -62,7 +50,7 @@ namespace Eventos.IO.Domain.Models
             return ValidationResult.IsValid;
         }
 
-        // public Dictionary<string, string> ErrosValidacao { get; set; }
+        
         #region Validações
 
         private void Validar()
